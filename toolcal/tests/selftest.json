@@ -1,0 +1,15 @@
+{
+  "settings": { "runs": 12, "warmup": 1, "timeout_ms": 3000, "grace_ms": 500, "cooldown_ms": 20,
+                "hard_output_kb": 1024, "induced_procs": [] },
+  "tools": [
+    { "name": "mem_snapshot",    "plane": "triage", "class": "light",    "command": ["cat", "/proc/meminfo"] },
+    { "name": "proc_scan",       "plane": "triage", "class": "light",    "command": "ls -l /proc/self/fd /proc/net", "shell": true },
+    { "name": "compress_work",   "plane": "triage", "class": "light",    "command": "head -c 8000000 /dev/urandom | gzip -1 > /dev/null", "shell": true },
+    { "name": "big_buffer",      "plane": "triage", "class": "standard", "command": ["dd", "if=/dev/zero", "of=/dev/null", "bs=40M", "count=2"] },
+    { "name": "fork_burst",      "plane": "triage", "class": "light",    "command": "for i in 1 2 3 4 5 6 7 8 9 10; do sleep 0.3 & done; wait", "shell": true },
+    { "name": "exits_nonzero",   "plane": "triage", "class": "light",    "command": ["ls", "/does/not/exist"] },
+    { "name": "leaves_daemon",   "plane": "triage", "class": "light",    "command": "sleep 30 > /dev/null 2>&1 & echo started", "shell": true },
+    { "name": "cpu_loop",        "plane": "triage", "class": "light",    "command": "while :; do :; done", "shell": true, "runs": 3 },
+    { "name": "endless_output",  "plane": "triage", "class": "light",    "command": ["yes"], "runs": 3 }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "generated": "2026-10-05T22:26:25-0400",
+  "host": "vm",
+  "kernel": "6.18.44-fc-v70",
+  "budget_factor": 1.50,
+  "basis": "max",
+  "tools": [
+    {
+      "name": "mem_snapshot",
+      "plane": "triage",
+      "class": "light",
+      "verdict": "PASS",
+      "budget": { "cpu_ms": 10, "wall_ms": 100, "mem_kb": 1024, "out_kb": 3 },
+      "conditions": {
+        "idle": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "mem_kb": { "p50": 256.0, "p95": 512.0, "max": 512.0 }, "out_kb": { "p50": 1.5, "p95": 1.5, "max": 1.5 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "typical": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 2.0, "p95": 3.0, "max": 3.0 }, "mem_kb": { "p50": 256.0, "p95": 512.0, "max": 512.0 }, "out_kb": { "p50": 1.5, "p95": 1.5, "max": 1.5 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "stressed": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 2.0, "p95": 4.0, "max": 4.0 }, "mem_kb": { "p50": 256.0, "p95": 512.0, "max": 512.0 }, "out_kb": { "p50": 1.5, "p95": 1.5, "max": 1.5 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } }
+      },
+      "notes": "fewer than 20 runs in a condition (min 12); p95 is approximate"
+    },
+    {
+      "name": "proc_scan",
+      "plane": "triage",
+      "class": "light",
+      "verdict": "PASS",
+      "budget": { "cpu_ms": 10, "wall_ms": 100, "mem_kb": 1536, "out_kb": 1 },
+      "conditions": {
+        "idle": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 2.0, "p95": 3.0, "max": 3.0 }, "cpu_self_ms": { "p50": 2.0, "p95": 3.0, "max": 3.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 3.0, "p95": 4.0, "max": 4.0 }, "mem_kb": { "p50": 768.0, "p95": 860.0, "max": 860.0 }, "out_kb": { "p50": 0.4, "p95": 0.5, "max": 0.5 }, "pids": { "p50": 2.0, "p95": 2.0, "max": 2.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "typical": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 2.0, "p95": 3.0, "max": 3.0 }, "cpu_self_ms": { "p50": 2.0, "p95": 3.0, "max": 3.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 3.0, "p95": 5.0, "max": 5.0 }, "mem_kb": { "p50": 512.0, "p95": 768.0, "max": 768.0 }, "out_kb": { "p50": 0.4, "p95": 0.5, "max": 0.5 }, "pids": { "p50": 2.0, "p95": 2.0, "max": 2.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "stressed": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 2.0, "p95": 3.0, "max": 3.0 }, "cpu_self_ms": { "p50": 2.0, "p95": 3.0, "max": 3.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 5.0, "p95": 5.0, "max": 5.0 }, "mem_kb": { "p50": 768.0, "p95": 768.0, "max": 768.0 }, "out_kb": { "p50": 0.4, "p95": 0.5, "max": 0.5 }, "pids": { "p50": 2.0, "p95": 2.0, "max": 2.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } }
+      },
+      "notes": "fewer than 20 runs in a condition (min 12); p95 is approximate"
+    },
+    {
+      "name": "compress_work",
+      "plane": "triage",
+      "class": "standard",
+      "verdict": "REVIEW",
+      "budget": { "cpu_ms": 460, "wall_ms": 500, "mem_kb": 2816, "out_kb": 1 },
+      "conditions": {
+        "idle": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 283.0, "p95": 296.0, "max": 296.0 }, "cpu_self_ms": { "p50": 283.0, "p95": 296.0, "max": 296.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 256.0, "p95": 270.0, "max": 270.0 }, "mem_kb": { "p50": 1692.0, "p95": 1752.0, "max": 1752.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 3.0, "p95": 3.0, "max": 3.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "typical": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 276.0, "p95": 302.0, "max": 302.0 }, "cpu_self_ms": { "p50": 276.0, "p95": 302.0, "max": 302.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 278.0, "p95": 305.0, "max": 305.0 }, "mem_kb": { "p50": 1500.0, "p95": 1732.0, "max": 1732.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 3.0, "p95": 3.0, "max": 3.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "stressed": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 274.0, "p95": 287.0, "max": 287.0 }, "cpu_self_ms": { "p50": 274.0, "p95": 287.0, "max": 287.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 279.0, "p95": 325.0, "max": 325.0 }, "mem_kb": { "p50": 1628.0, "p95": 1740.0, "max": 1740.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 3.0, "p95": 3.0, "max": 3.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } }
+      },
+      "notes": "declared class 'light' but measured 'standard'; fewer than 20 runs in a condition (min 12); p95 is approximate"
+    },
+    {
+      "name": "big_buffer",
+      "plane": "triage",
+      "class": "heavy",
+      "verdict": "REVIEW",
+      "budget": { "cpu_ms": 50, "wall_ms": 100, "mem_kb": 62208, "out_kb": 1 },
+      "conditions": {
+        "idle": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 24.0, "p95": 26.0, "max": 26.0 }, "cpu_self_ms": { "p50": 24.0, "p95": 26.0, "max": 26.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 25.0, "p95": 27.0, "max": 27.0 }, "mem_kb": { "p50": 41472.0, "p95": 41472.0, "max": 41472.0 }, "out_kb": { "p50": 0.1, "p95": 0.1, "max": 0.1 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "typical": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 24.0, "p95": 27.0, "max": 27.0 }, "cpu_self_ms": { "p50": 24.0, "p95": 27.0, "max": 27.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 25.0, "p95": 28.0, "max": 28.0 }, "mem_kb": { "p50": 41472.0, "p95": 41472.0, "max": 41472.0 }, "out_kb": { "p50": 0.1, "p95": 0.1, "max": 0.1 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "stressed": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 20.0, "p95": 21.0, "max": 21.0 }, "cpu_self_ms": { "p50": 20.0, "p95": 21.0, "max": 21.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 23.0, "p95": 35.0, "max": 35.0 }, "mem_kb": { "p50": 41472.0, "p95": 41472.0, "max": 41472.0 }, "out_kb": { "p50": 0.1, "p95": 0.1, "max": 0.1 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } }
+      },
+      "notes": "declared class 'standard' but measured 'heavy'; fewer than 20 runs in a condition (min 12); p95 is approximate"
+    },
+    {
+      "name": "fork_burst",
+      "plane": "triage",
+      "class": "light",
+      "verdict": "PASS",
+      "budget": { "cpu_ms": 30, "wall_ms": 500, "mem_kb": 4864, "out_kb": 1 },
+      "conditions": {
+        "idle": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 14.0, "p95": 15.0, "max": 15.0 }, "cpu_self_ms": { "p50": 14.0, "p95": 15.0, "max": 15.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 307.0, "p95": 309.0, "max": 309.0 }, "mem_kb": { "p50": 2952.0, "p95": 3124.0, "max": 3124.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 11.0, "p95": 11.0, "max": 11.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "typical": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 12.0, "p95": 13.0, "max": 13.0 }, "cpu_self_ms": { "p50": 12.0, "p95": 13.0, "max": 13.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 309.0, "p95": 310.0, "max": 310.0 }, "mem_kb": { "p50": 2896.0, "p95": 3152.0, "max": 3152.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 11.0, "p95": 11.0, "max": 11.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "stressed": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 12.0, "p95": 13.0, "max": 13.0 }, "cpu_self_ms": { "p50": 12.0, "p95": 13.0, "max": 13.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 311.0, "p95": 316.0, "max": 316.0 }, "mem_kb": { "p50": 3084.0, "p95": 3104.0, "max": 3104.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 11.0, "p95": 11.0, "max": 11.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } }
+      },
+      "notes": "fewer than 20 runs in a condition (min 12); p95 is approximate"
+    },
+    {
+      "name": "exits_nonzero",
+      "plane": "triage",
+      "class": "light",
+      "verdict": "REVIEW",
+      "budget": { "cpu_ms": 10, "wall_ms": 100, "mem_kb": 1024, "out_kb": 1 },
+      "conditions": {
+        "idle": { "runs": 12, "nonzero_rc": 12, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 2.0, "p95": 3.0, "max": 3.0 }, "mem_kb": { "p50": 256.0, "p95": 512.0, "max": 512.0 }, "out_kb": { "p50": 0.1, "p95": 0.1, "max": 0.1 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "typical": { "runs": 12, "nonzero_rc": 12, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 2.0, "p95": 2.0, "max": 2.0 }, "mem_kb": { "p50": 256.0, "p95": 512.0, "max": 512.0 }, "out_kb": { "p50": 0.1, "p95": 0.1, "max": 0.1 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "stressed": { "runs": 12, "nonzero_rc": 12, "timeouts": 0, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 2.0, "p95": 2.0, "max": 2.0 }, "mem_kb": { "p50": 512.0, "p95": 512.0, "max": 512.0 }, "out_kb": { "p50": 0.1, "p95": 0.1, "max": 0.1 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } }
+      },
+      "notes": "non-zero exit in 12/12 runs (idle); non-zero exit in 12/12 runs (typical); non-zero exit in 12/12 runs (stressed); fewer than 20 runs in a condition (min 12); p95 is approximate"
+    },
+    {
+      "name": "leaves_daemon",
+      "plane": "triage",
+      "class": "light",
+      "verdict": "REVIEW",
+      "budget": { "cpu_ms": 10, "wall_ms": 100, "mem_kb": 1280, "out_kb": 1 },
+      "conditions": {
+        "idle": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 12, "cpu_total_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "mem_kb": { "p50": 768.0, "p95": 768.0, "max": 768.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 2.0, "p95": 2.0, "max": 2.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "typical": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 12, "cpu_total_ms": { "p50": 2.0, "p95": 3.0, "max": 3.0 }, "cpu_self_ms": { "p50": 2.0, "p95": 3.0, "max": 3.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 1.0, "p95": 3.0, "max": 3.0 }, "mem_kb": { "p50": 716.0, "p95": 768.0, "max": 768.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 2.0, "p95": 2.0, "max": 2.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "stressed": { "runs": 12, "nonzero_rc": 0, "timeouts": 0, "output_capped": 0, "leftover_runs": 12, "cpu_total_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 1.0, "p95": 5.0, "max": 5.0 }, "mem_kb": { "p50": 768.0, "p95": 768.0, "max": 768.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 2.0, "p95": 2.0, "max": 2.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } }
+      },
+      "notes": "left processes behind in 12 run(s) (idle); left processes behind in 12 run(s) (typical); left processes behind in 12 run(s) (stressed); fewer than 20 runs in a condition (min 12); p95 is approximate"
+    },
+    {
+      "name": "cpu_loop",
+      "plane": "triage",
+      "class": "unclassified",
+      "verdict": "FAIL",
+      "budget": { "cpu_ms": 4520, "wall_ms": 4600, "mem_kb": 1024, "out_kb": 1 },
+      "conditions": {
+        "idle": { "runs": 3, "nonzero_rc": 3, "timeouts": 3, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 3007.0, "p95": 3008.0, "max": 3008.0 }, "cpu_self_ms": { "p50": 3007.0, "p95": 3008.0, "max": 3008.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 3007.0, "p95": 3009.0, "max": 3009.0 }, "mem_kb": { "p50": 512.0, "p95": 512.0, "max": 512.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "typical": { "runs": 3, "nonzero_rc": 3, "timeouts": 3, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 2989.0, "p95": 2998.0, "max": 2998.0 }, "cpu_self_ms": { "p50": 2989.0, "p95": 2998.0, "max": 2998.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 3006.0, "p95": 3010.0, "max": 3010.0 }, "mem_kb": { "p50": 256.0, "p95": 256.0, "max": 256.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "stressed": { "runs": 3, "nonzero_rc": 3, "timeouts": 3, "output_capped": 0, "leftover_runs": 0, "cpu_total_ms": { "p50": 2836.0, "p95": 2859.0, "max": 2859.0 }, "cpu_self_ms": { "p50": 2836.0, "p95": 2859.0, "max": 2859.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 3004.0, "p95": 3008.0, "max": 3008.0 }, "mem_kb": { "p50": 256.0, "p95": 512.0, "max": 512.0 }, "out_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } }
+      },
+      "notes": "CPU budget 4520 ms exceeds heavy limit 2000 ms; declared class 'light' but measured 'unclassified'; 3 timeout(s) in idle; non-zero exit in 3/3 runs (idle); 3 timeout(s) in typical; non-zero exit in 3/3 runs (typical); 3 timeout(s) in stressed; non-zero exit in 3/3 runs (stressed); fewer than 20 runs in a condition (min 3); p95 is approximate"
+    },
+    {
+      "name": "endless_output",
+      "plane": "triage",
+      "class": "unclassified",
+      "verdict": "FAIL",
+      "budget": { "cpu_ms": 10, "wall_ms": 100, "mem_kb": 1280, "out_kb": 1656 },
+      "conditions": {
+        "idle": { "runs": 3, "nonzero_rc": 3, "timeouts": 0, "output_capped": 3, "leftover_runs": 0, "cpu_total_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 2.0, "p95": 2.0, "max": 2.0 }, "mem_kb": { "p50": 656.0, "p95": 704.0, "max": 704.0 }, "out_kb": { "p50": 1080.0, "p95": 1096.0, "max": 1096.0 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "typical": { "runs": 3, "nonzero_rc": 3, "timeouts": 0, "output_capped": 3, "leftover_runs": 0, "cpu_total_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 1.0, "p95": 2.0, "max": 2.0 }, "mem_kb": { "p50": 512.0, "p95": 712.0, "max": 712.0 }, "out_kb": { "p50": 1096.0, "p95": 1096.0, "max": 1096.0 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } },
+        "stressed": { "runs": 3, "nonzero_rc": 3, "timeouts": 0, "output_capped": 3, "leftover_runs": 0, "cpu_total_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "cpu_self_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "induced_cpu_ms": { "p50": 0.0, "p95": 0.0, "max": 0.0 }, "wall_ms": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "mem_kb": { "p50": 512.0, "p95": 512.0, "max": 512.0 }, "out_kb": { "p50": 1096.0, "p95": 1104.0, "max": 1104.0 }, "pids": { "p50": 1.0, "p95": 1.0, "max": 1.0 }, "io_kb": { "p50": 0.0, "p95": 0.0, "max": 0.0 } }
+      },
+      "notes": "output budget 1656 KB exceeds heavy limit 64 KB; declared class 'light' but measured 'unclassified'; output hard-capped 3 time(s) in idle; non-zero exit in 3/3 runs (idle); output hard-capped 3 time(s) in typical; non-zero exit in 3/3 runs (typical); output hard-capped 3 time(s) in stressed; non-zero exit in 3/3 runs (stressed); fewer than 20 runs in a condition (min 3); p95 is approximate"
+    }
+  ]
+}
