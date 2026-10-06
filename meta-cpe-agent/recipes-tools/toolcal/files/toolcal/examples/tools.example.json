@@ -1,0 +1,37 @@
+{
+  "settings": {
+    "runs": 30,
+    "warmup": 1,
+    "timeout_ms": 10000,
+    "grace_ms": 2000,
+    "poll_ms": 10,
+    "cooldown_ms": 200,
+    "save_output_kb": 64,
+    "hard_output_kb": 4096,
+    "budget_factor": 1.5,
+    "cgroup_mode": "auto",
+    "cgroup_v2_root": "/sys/fs/cgroup",
+    "cgroup_v1_root": "/sys/fs/cgroup",
+    "group": "toolcal",
+    "induced_procs": ["CcspPandMSsp", "CcspWifiSsp", "CcspCrSsp", "PsmSsp", "rtrouted", "CcspCMAgentSsp"]
+  },
+  "classes": [
+    { "name": "light",    "cpu_ms": 200,  "wall_ms": 2000,  "mem_kb": 8192,  "out_kb": 16 },
+    { "name": "standard", "cpu_ms": 1000, "wall_ms": 10000, "mem_kb": 32768, "out_kb": 64 },
+    { "name": "heavy",    "cpu_ms": 2000, "wall_ms": 10000, "mem_kb": 65536, "out_kb": 64 }
+  ],
+  "tools": [
+    { "name": "mem_snapshot",       "plane": "triage",     "class": "light",    "command": ["cat", "/proc/meminfo"] },
+    { "name": "psi_snapshot",       "plane": "triage",     "class": "light",    "command": "cat /proc/pressure/cpu /proc/pressure/memory /proc/pressure/io" },
+    { "name": "top_processes",      "plane": "triage",     "class": "light",    "command": "top -b -n 1 | head -n 25", "shell": true },
+    { "name": "interface_counters", "plane": "triage",     "class": "light",    "command": ["cat", "/proc/net/dev"] },
+    { "name": "conntrack_count",    "plane": "triage",     "class": "light",    "command": ["cat", "/proc/sys/net/netfilter/nf_conntrack_count"] },
+    { "name": "device_uptime",      "plane": "management", "class": "light",    "command": ["dmcli", "eRT", "getv", "Device.DeviceInfo.UpTime"],
+      "induced_procs": ["CcspPandMSsp", "CcspCrSsp", "rtrouted"] },
+    { "name": "wifi_radio_stats",   "plane": "triage",     "class": "standard", "command": ["dmcli", "eRT", "getv", "Device.WiFi.Radio.1.Stats."],
+      "induced_procs": ["CcspWifiSsp", "CcspCrSsp", "rtrouted"] },
+    { "name": "console_log_tail",   "plane": "triage",     "class": "standard", "command": ["tail", "-n", "200", "/rdklogs/logs/Consolelog.txt.0"] },
+    { "name": "dmesg_tail",         "plane": "triage",     "class": "standard", "command": "dmesg | tail -n 100", "shell": true },
+    { "name": "ping_gateway",       "plane": "triage",     "class": "standard", "command": ["ping", "-c", "3", "-W", "1", "8.8.8.8"], "runs": 10 }
+  ]
+}

@@ -1,0 +1,9 @@
+# Sample only. Rename to match your kernel recipe (for example
+# linux-<vendor>_%.bbappend), move it under recipes-kernel/linux/ and put
+# toolcal-cgroups.cfg in recipes-kernel/linux/files/.
+#
+# This works for kernels built with kernel-yocto config fragments. Many SoC
+# vendor kernels use a fixed defconfig instead: add the options from
+# toolcal-cgroups.cfg to that defconfig.
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+SRC_URI += "file://toolcal-cgroups.cfg"
